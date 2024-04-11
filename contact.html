@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS Variables */
+        :root {
+            --brand-color: #212123;
+            --linear-back: Linear-gradient(180deg,
+                    rgba(33, 33, 35, 1) 0%,
+                    rgba(17, 17, 17, 1) 100%);
+            --darker-background: #1e1e1e;
+            --darker-text: #121212;
+            --secondary-text: #252525;
+            --lightest-background: #222224;
+        }
+
+        body {
+            background: var(--darker-background);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title{
+            font-size: 2rem;
+        }
+        .website_container {
+            width: 80%;
+            height: 80%;
+            background: var(--lightest-background);
+            display: flex;
+            padding: 1rem;
+            position: relative;
+            border-radius: 0.5rem;
+        }
+
+        .contact_page .contact_container {
+            margin: 1.2rem 0.4rem;
+        }
+
+        .contact_container form .form_name_row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact_container form .form_name_row .left_form_row {
+            width: 47%;
+        }
+
+        .contact_container form .form_name_row .right_form_row {
+            width: 47%;
+        }
+
+        .contact_container form label {
+            display: block;
+            font-size: 1rem;
+            margin-top: 0.8rem;
+            margin-left: 0.2rem;
+            color: var(--secondary-text);
+        }
+
+        .contact_container form input {
+            width: 100%;
+            font-size: 1rem;
+            padding: 0.3rem;
+            border: none;
+            outline: none;
+            background-color: lightgray;
+            border-radius: 0.4rem;
+            color: var(--darker-text);
+        }
+
+        .contact_container form textarea {
+            width: 100%;
+            font-size: 1rem;
+            padding: 0.3rem;
+            border: none;
+            outline: none;
+            background-color: lightgray;
+            border-radius: 0.4rem;
+            height: 6rem;
+            resize: none;
+            color: var(--darker-text);
+        }
+
+        .contact_container form #send_button {
+            background-color: orange;
+            margin-top: 0.6rem;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact_container form #send_button:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="website_container">
+        <div class="content_container">
+            <h2 class="title" style="color: gold;">Contact <span>Me</span></h2>
+            <hr class="line">
+            <div class="contact_container">
+                <form action="post">
+                    <div class="form_name_row">
+                        <div class="left_form_row">
+                            <label>First Name</label>
+                            <input type="text" required placeholder="Enter First Name">
+                        </div>
+                        <div class="right_form_row">
+                            <label>Last Name</label>
+                            <input type="text" required placeholder="Enter Last Name">
+                        </div>
+                    </div>
+                    <label>Email</label>
+                    <input type="email" name="" id="" required placeholder="Enter Email">
+                    <label>Phone Number</label>
+                    <input type="text" name="" id="" required placeholder="Enter Phone Number">
+                    <label>Subject</label>
+                    <input type="text" name="" id="" required placeholder="Enter Subject">
+                    <label>Message</label>
+                    <textarea name="" id="" cols="30" rows="10" required placeholder="Enter Message"></textarea>
+                    <input type="submit" value="Send" id="send_button">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
